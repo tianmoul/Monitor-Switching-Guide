@@ -53,7 +53,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 - 下载地址：
 - 绑定快捷键到批处理文件
 - <img src="image/monitor_switching_guide/1750153963502.png" width="40%">
-- 建议快捷键：`Win + Alt + M` (切换到Mac)
+- 建议快捷键：`Win + Alt + A` (切换到Mac)
 
 ## 🍎 macOS配置
 
@@ -103,8 +103,8 @@ m1ddc display 2 set input 7
 
 ### 按键绑定
 
-- 将win + alt + A绑定的按键接收器连接到Windows PC上
-- 将opt + cmd + Q绑定的按键接收器链接到Mac上
+- 将Win + Alt + A绑定的按键接收器连接到Windows PC上
+- 将Opt + Cmd + Q绑定的按键接收器链接到Mac上
 - 这样就可以实现物理按键一键切换显示器的功能
 
 ## 📊 输入源代码对照表
