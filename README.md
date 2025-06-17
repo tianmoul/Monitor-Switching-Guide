@@ -202,7 +202,7 @@ MIT License - Free to use and modify
 
 ## 🎯 项目概述
 
-通过软件 + 硬件组合实现Windows和macOS双系统环境下的显示器信号源无缝切换，支持一键在Mac和PC之间切换双显示器输入源。
+通过软件 + 硬件组合实现Windows和macOS双设备环境下的显示器信号源无缝切换，支持一键在Mac和PC之间切换双显示器输入源。
 
 ## 💻 系统要求
 
