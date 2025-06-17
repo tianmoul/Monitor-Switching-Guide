@@ -166,7 +166,7 @@ m1ddc display 2 get input
 - **m1ddc command not found**: Check PATH environment variable
 - **Permission denied**: Allow terminal access in Security & Privacy
 - **Monitor not responding**: Confirm USB-C cable supports display output
-- **Extension hub supported HDMI port sometimes would fail to answer to m1ddc, that's why I used a USB-C port to connect with my second screen
+- **Etension hub supported HDMI port sometimes would fail to answer to m1ddc, that's why I used a USB-C port to connect with my second screen
 
 ### General Issues
 
