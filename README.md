@@ -47,7 +47,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 - Download:
 - Bind hotkeys to batch file
 - <img src="image/monitor_switching_guide/1750153963502.png" width="40%">
-- Suggested hotkey: `Win + Alt + M` (switch to Mac)
+- Suggested hotkey: `Win + Alt + A` (switch to Mac)
 
 ## 🍎 macOS Configuration
 
@@ -221,7 +221,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 - 下载地址：
 - 绑定快捷键到批处理文件
 - <img src="image/monitor_switching_guide/1750153963502.png" width="40%">
-- 建议快捷键：`Win + Alt + M` (切换到Mac)
+- 建议快捷键：`Win + Alt + A` (切换到Mac)
 
 ## 🍎 macOS配置
 
