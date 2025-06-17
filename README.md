@@ -2,7 +2,7 @@
 
 ## 🎯 Project Overview
 
-A software + hardware combination solution to achieve seamless monitor input source switching between Windows and macOS dual-system environments, supporting one-touch switching of dual monitor input sources between Mac and PC.
+A software + hardware combination solution to achieve seamless monitor input source switching between Windows and macOS devices, supporting one-touch switching of dual monitor input sources between Mac and PC.
 
 ## 💻 System Requirements
 
