@@ -51,7 +51,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 
 ### 3. WinHotKey Configuration
 
-- Download:
+- Download:[WinHotKey](https://directedge.us/content/winhotkey/)
 - Bind hotkeys to batch file
 - <img src="image/monitor_switching_guide/1750153963502.png" width="40%">
 - Suggested hotkey: `Win + Alt + A` (switch to Mac)
@@ -250,7 +250,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 
 ### 3. WinHotKey配置
 
-- 下载地址：
+- 下载地址：[WinHotKey](https://directedge.us/content/winhotkey/)
 - 绑定快捷键到批处理文件
 - <img src="image/monitor_switching_guide/1750153963502.png" width="40%">
 - 建议快捷键：`Win + Alt + A` (切换到Mac)
