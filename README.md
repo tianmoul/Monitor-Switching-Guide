@@ -315,7 +315,7 @@ m1ddc display 2 set input 7
 
 | 输入源类型  | Windows代码 | macOS代码 | 说明           |
 | ----------- | ----------- | --------- | -------------- |
-| HDMI1       | 6           | 6         | 第一个HDMI接口 |
+| HDMI1       | 5           | 5         | 第一个HDMI接口 |
 | HDMI2       | 6           | 6         | 第二个HDMI接口 |
 | DisplayPort | 7           | 7         | DP接口         |
 | USB-C/DP    | 8           | 8         | USB-C显示输出  |
