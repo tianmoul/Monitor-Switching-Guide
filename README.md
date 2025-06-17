@@ -86,15 +86,16 @@ m1ddc display 2 set input 7
 2. Add "Run Shell Script" action
 3. Paste the above script content
 4. Save as ChangeMonitorInput
-5. `<img src="image/monitor_switching_guide/Automator.png" width="40%">`
+5. <img src="image/monitor_switching_guide/Automator.png" width="40%">
+
 
 
 ### 4. System Shortcut Binding
 
 - System Preferences → Keyboard → Keyboard Shortcuts → Services → General → ChangeMonitorInput
 - Add custom shortcut (e.g., Opt + Cmd + Q)
-- `<img src="image/monitor_switching_guide/keyboard.png" width="40%">`
-- `<img src="image/monitor_switching_guide/Shortcut.png" width="40%">`
+- <img src="image/monitor_switching_guide/keyboard.png" width="40%">
+- <img src="image/monitor_switching_guide/Shortcut.png" width="40%">
 
 
 
@@ -284,11 +285,15 @@ m1ddc display 2 set input 7
 2. 添加"运行Shell脚本"操作
 3. 粘贴上述脚本内容
 4. 保存为ChangeMonitorInput
+5. <img src="image/monitor_switching_guide/Automator.png" width="40%">
+
 
 ### 4. 系统快捷键绑定
 
 - 系统偏好设置 → 键盘 → 键盘快捷键 → Services → General → ChangeMonitorInput
 - 添加自定义快捷键（比如Opt + Cmd + Q）
+- <img src="image/monitor_switching_guide/keyboard.png" width="40%">
+- <img src="image/monitor_switching_guide/Shortcut.png" width="40%">
 
 ## ⌨️ 硬件键盘配置
 
