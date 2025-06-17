@@ -7,16 +7,19 @@ A software + hardware combination solution to achieve seamless monitor input sou
 ## 💻 System Requirements
 
 ### Windows
+
 - **ControlMyMonitor.exe** - Monitor control tool from NirSoft
 - **WinHotKey** - Hotkey binding tool
 - Windows 10/11
 
 ### macOS
+
 - **m1ddc** - DDC/CI monitor control tool
 - **Automator** - Built-in workflow tool
 - macOS 10.14+
 
 ### Hardware
+
 - Monitors supporting DDC/CI protocol
 - Mechanical keyboards with custom key support (recommended) or standalone custom keys (my current solution)
 - KVM or multi-input source monitor setup
@@ -24,6 +27,7 @@ A software + hardware combination solution to achieve seamless monitor input sou
 ## 🔧 Windows Configuration
 
 ### 1. Install ControlMyMonitor
+
 - Download: [NirSoft ControlMyMonitor](https://www.nirsoft.net/utils/control_my_monitor.html)
 - Extract to a fixed directory, e.g., `C:\Program Files (x86)\controlmymonitor\`
 - Use ControlMyMonitor to find the monitor's input variable (60) and variable values (my DP input is 7, HDMI input value is 6, type-c input value is 8). It's recommended to connect Windows host using different methods to obtain these variable values, otherwise you'll have to guess
@@ -32,6 +36,7 @@ A software + hardware combination solution to achieve seamless monitor input sou
 ### 2. Create Switching Script
 
 **SetMonitorInputtoMac.bat**
+
 ```batch
 @echo off
 # Windows left screen is DISPLAY1 and it's type-c which is 8
@@ -44,6 +49,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 * Store in a fixed directory, e.g., `C:\Program Files (x86)\controlmymonitor\`
 
 ### 3. WinHotKey Configuration
+
 - Download:
 - Bind hotkeys to batch file
 - <img src="image/monitor_switching_guide/1750153963502.png" width="40%">
@@ -52,6 +58,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 ## 🍎 macOS Configuration
 
 ### 1. Install m1ddc
+
 ```bash
 # Ensure Homebrew path
 export PATH=$PATH:/opt/homebrew/bin
@@ -62,7 +69,8 @@ brew install m1ddc
 
 ### 2. Create Switching Script
 
-**switch-to-mac.sh**
+**ChangeMonitorInput.sh**
+
 ```bash
 #!/bin/bash
 export PATH=$PATH:/opt/homebrew/bin
@@ -73,40 +81,51 @@ m1ddc display 2 set input 7
 ```
 
 ### 3. Automator Workflow
-1. Open Automator, create "Application"
+
+1. Open Automator, create "Workflow"
 2. Add "Run Shell Script" action
 3. Paste the above script content
-4. Save as application to Applications folder
+4. Save as ChangeMonitorInput
+5. `<img src="image/monitor_switching_guide/Automator.png" width="40%">`
+
 
 ### 4. System Shortcut Binding
-- System Preferences → Keyboard → Shortcuts → Services → General → switch-to-mac
-- Add custom shortcut (e.g., opt + cmd + Q) binding to Automator app
+
+- System Preferences → Keyboard → Keyboard Shortcuts → Services → General → ChangeMonitorInput
+- Add custom shortcut (e.g., Opt + Cmd + Q)
+- `<img src="image/monitor_switching_guide/keyboard.png" width="40%">`
+- `<img src="image/monitor_switching_guide/Shortcut.png" width="40%">`
+
+
 
 ## ⌨️ Hardware Keyboard Configuration
 
 ### Supported Keyboard Types
+
 - QMK firmware keyboards
 - VIA supported keyboards
 - Vendor custom software keyboards
 - Custom keyboards with 2.4GHz receiver support (recommended)
 
 ### Key Binding
+
 - Connect the receiver with Win + Alt + A binding to Windows PC
 - Connect the receiver with Opt + Cmd + Q binding to Mac
 - This enables physical key one-touch monitor switching functionality
 
 ## 📊 Input Source Code Reference Table
 
-| Input Source Type | Windows Code | macOS Code | Description |
-| ----------------- | ------------ | ---------- | ----------- |
-| HDMI1             | 6            | 6          | First HDMI port |
-| HDMI2             | 6            | 6          | Second HDMI port |
-| DisplayPort       | 7            | 7          | DP port |
+| Input Source Type | Windows Code | macOS Code | Description          |
+| ----------------- | ------------ | ---------- | -------------------- |
+| HDMI1             | 6            | 6          | First HDMI port      |
+| HDMI2             | 6            | 6          | Second HDMI port     |
+| DisplayPort       | 7            | 7          | DP port              |
 | USB-C/DP          | 8            | 8          | USB-C display output |
 
 ## 🔍 Monitor Detection
 
 ### Windows
+
 ```batch
 # View all monitors
 ControlMyMonitor.exe /stext monitors.txt
@@ -116,6 +135,7 @@ ControlMyMonitor.exe /GetValue "\\.\DISPLAY1\Monitor0" 60
 ```
 
 ### macOS
+
 ```bash
 # List all monitors
 m1ddc detect
@@ -134,16 +154,19 @@ m1ddc display 2 get input
 ## 🐛 Troubleshooting
 
 ### Windows Common Issues
+
 - **ControlMyMonitor not responding**: Check if monitor supports DDC/CI
 - **Insufficient permissions**: Run as administrator
 - **Wrong monitor number**: Use ControlMyMonitor to check correct monitor identifier
 
 ### macOS Common Issues
+
 - **m1ddc command not found**: Check PATH environment variable
 - **Permission denied**: Allow terminal access in Security & Privacy
 - **Monitor not responding**: Confirm USB-C cable supports display output
 
 ### General Issues
+
 - **Input source code mismatch**: Different monitor brands may have different codes, need to test individually
 - **Switching delay**: Some monitors need 2-3 seconds recognition time
 
@@ -157,6 +180,7 @@ m1ddc display 2 get input
 ## 🤝 Contribution Guidelines
 
 Welcome submissions of:
+
 - New monitor compatibility test results
 - Configuration methods for other keyboard brands
 - Improved scripts and tools
@@ -181,16 +205,19 @@ MIT License - Free to use and modify
 ## 💻 系统要求
 
 ### Windows
+
 - **ControlMyMonitor.exe** - NirSoft出品的显示器控制工具
 - **WinHotKey** - 热键绑定工具
 - Windows 10/11
 
 ### macOS
+
 - **m1ddc** - DDC/CI显示器控制工具
 - **Automator** - 系统自带工作流工具
 - macOS 10.14+
 
 ### 硬件
+
 - 支持DDC/CI协议的显示器
 - 支持自定义按键的机械键盘（推荐）或单独购买自定义按键（本人目前使用方案）
 - KVM或多输入源显示器设置
@@ -198,6 +225,7 @@ MIT License - Free to use and modify
 ## 🔧 Windows配置
 
 ### 1. 安装ControlMyMonitor
+
 - 下载地址：[NirSoft ControlMyMonitor](https://www.nirsoft.net/utils/control_my_monitor.html)
 - 解压到固定目录，如 `C:\Program Files (x86)\controlmymonitor\`
 - 通过controlmymonitor找到显示器的输入变量（60）以及变量值（我的DP输入为7，HDMI输入值为6，type-c输入值为8），这里推荐用不同方式链接windows主机来获取该变量值，否则只能猜
@@ -206,6 +234,7 @@ MIT License - Free to use and modify
 ### 2. 创建切换脚本
 
 **SetMonitorInputtoMac.bat**
+
 ```batch
 @echo off
 # Windows left screen is DISPLAY1 and it's type-c which is 8
@@ -218,6 +247,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 * 存储到固定目录，如 `C:\Program Files (x86)\controlmymonitor\`
 
 ### 3. WinHotKey配置
+
 - 下载地址：
 - 绑定快捷键到批处理文件
 - <img src="image/monitor_switching_guide/1750153963502.png" width="40%">
@@ -226,6 +256,7 @@ ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 6
 ## 🍎 macOS配置
 
 ### 1. 安装m1ddc
+
 ```bash
 # 确保Homebrew路径
 export PATH=$PATH:/opt/homebrew/bin
@@ -237,6 +268,7 @@ brew install m1ddc
 ### 2. 创建切换脚本
 
 **switch-to-mac.sh**
+
 ```bash
 #!/bin/bash
 export PATH=$PATH:/opt/homebrew/bin
@@ -247,24 +279,28 @@ m1ddc display 2 set input 7
 ```
 
 ### 3. Automator工作流
-1. 打开Automator，创建"应用程序"
+
+1. 打开Automator，创建"Workflow"
 2. 添加"运行Shell脚本"操作
 3. 粘贴上述脚本内容
-4. 保存为应用程序到应用程序文件夹
+4. 保存为ChangeMonitorInput
 
 ### 4. 系统快捷键绑定
-- 系统偏好设置 → 键盘 → 快捷键 → Services → General → switch-to-mac
-- 添加自定义快捷键（比如Opt + Cmd + Q）绑定到Automator应用
+
+- 系统偏好设置 → 键盘 → 键盘快捷键 → Services → General → ChangeMonitorInput
+- 添加自定义快捷键（比如Opt + Cmd + Q）
 
 ## ⌨️ 硬件键盘配置
 
 ### 支持的键盘类型
+
 - QMK固件键盘
 - VIA支持的键盘
 - 厂商自定义软件键盘
 - 支持2.4GHz接收器的自定义键盘（推荐）
 
 ### 按键绑定
+
 - 将Win + Alt + A绑定的按键接收器连接到Windows PC上
 - 将Opt + Cmd + Q绑定的按键接收器链接到Mac上
 - 这样就可以实现物理按键一键切换显示器的功能
@@ -281,6 +317,7 @@ m1ddc display 2 set input 7
 ## 🔍 显示器识别
 
 ### Windows
+
 ```batch
 # 查看所有显示器
 ControlMyMonitor.exe /stext monitors.txt
@@ -290,6 +327,7 @@ ControlMyMonitor.exe /GetValue "\\.\DISPLAY1\Monitor0" 60
 ```
 
 ### macOS
+
 ```bash
 # 列出所有显示器
 m1ddc detect
@@ -308,16 +346,19 @@ m1ddc display 2 get input
 ## 🐛 故障排除
 
 ### Windows常见问题
+
 - **ControlMyMonitor无响应**：检查显示器是否支持DDC/CI
 - **权限不足**：以管理员身份运行
 - **显示器编号错误**：使用ControlMyMonitor查看正确的显示器标识
 
 ### macOS常见问题
+
 - **m1ddc命令找不到**：检查PATH环境变量
 - **权限被拒绝**：在安全性与隐私中允许终端访问
 - **显示器不响应**：确认USB-C线缆支持显示输出
 
 ### 通用问题
+
 - **输入源代码不匹配**：不同品牌显示器代码可能不同，需要逐一测试
 - **切换延迟**：某些显示器需要2-3秒识别时间
 
@@ -331,6 +372,7 @@ m1ddc display 2 get input
 ## 🤝 贡献指南
 
 欢迎提交：
+
 - 新的显示器兼容性测试结果
 - 其他品牌键盘的配置方法
 - 改进的脚本和工具
