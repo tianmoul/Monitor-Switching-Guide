@@ -93,7 +93,7 @@ m1ddc display 2 set input 7
 ### 4. System Shortcut Binding
 
 - System Preferences → Keyboard → Keyboard Shortcuts → Services → General → ChangeMonitorInput
-- Add custom shortcut (e.g., Opt + Cmd + Q)
+- Add custom shortcut (e.g., Opt + Cmd + ‘)
 - <img src="image/monitor_switching_guide/keyboard.png" width="40%">
 - <img src="image/monitor_switching_guide/Shortcut.png" width="40%">
 
@@ -111,7 +111,7 @@ m1ddc display 2 set input 7
 ### Key Binding
 
 - Connect the receiver with Win + Alt + A binding to Windows PC
-- Connect the receiver with Opt + Cmd + Q binding to Mac
+- Connect the receiver with Opt + Cmd + ‘ binding to Mac
 - This enables physical key one-touch monitor switching functionality
 
 ## 📊 Input Source Code Reference Table
@@ -291,7 +291,7 @@ m1ddc display 2 set input 7
 ### 4. 系统快捷键绑定
 
 - 系统偏好设置 → 键盘 → 键盘快捷键 → Services → General → ChangeMonitorInput
-- 添加自定义快捷键（比如Opt + Cmd + Q）
+- 添加自定义快捷键（比如Opt + Cmd + ‘）
 - <img src="image/monitor_switching_guide/keyboard.png" width="40%">
 - <img src="image/monitor_switching_guide/Shortcut.png" width="40%">
 
@@ -307,7 +307,7 @@ m1ddc display 2 set input 7
 ### 按键绑定
 
 - 将Win + Alt + A绑定的按键接收器连接到Windows PC上
-- 将Opt + Cmd + Q绑定的按键接收器链接到Mac上
+- 将Opt + Cmd + ‘绑定的按键接收器链接到Mac上
 - 这样就可以实现物理按键一键切换显示器的功能
 
 ## 📊 输入源代码对照表
