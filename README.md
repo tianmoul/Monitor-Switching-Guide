@@ -3,6 +3,7 @@
 ## 🎯 Project Overview
 
 A software + hardware combination solution to achieve seamless monitor input source switching between Windows and macOS devices, supporting one-touch switching of dual monitor input sources between Mac and PC.
+I have two screens, one connected to a PC and the other to a Mac. Tired of constantly switching the input source manually, I decided to take matters into my own hands. Drawing inspiration from various videos and blogs, I implemented a solution that not only addressed the issue but also included updates for outdated software and streamlined some of the overly complicated methods I found online.
 
 ## 💻 System Requirements
 
